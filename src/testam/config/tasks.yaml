@@ -1,0 +1,37 @@
+assign_dormitory:
+  description: >
+    Identify a suitable dormitory for a new student based on available space.
+    Assign the student to the first dormitory that has an open spot.
+    If no dormitories have space, return **"No available dormitory"**.
+
+    **Rules:**
+    - Check all dormitories in the provided list.
+    - Assign the student to the first dormitory with an available spot.
+    - If all dormitories are full, return **"No available dormitory"**.
+
+    **Available Dormitories:**
+    {dorm_list}
+
+  expected_output: >
+    - The assigned dormitory name.
+    - If no dormitory is available, return: **"No available dormitory"**.
+
+assign_students:
+  description: >
+    A student has been assigned to a dormitory by the Assign Dormitory agent. Now, assign them to a suitable room 
+    within that dormitory based on personality and availability.
+
+    **Rules:**
+    - Assign party-loving students together and quiet students together.
+    - **Each room can have a maximum of 2 students.**
+    - If no compatible room is available, return **"No available room"**.
+
+    **Current room assignments:**
+    {room_assignments}
+
+    **New student profile:**
+    {student_profile}
+
+  expected_output: >
+    - The selected room number and the reasoning for placement.
+    - If no room is available, return: **"No available room"**.

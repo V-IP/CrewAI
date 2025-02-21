@@ -1,0 +1,18 @@
+{
+    "Dorm A": {
+        "Room 1": ["Alice (quiet)", "Bob (quiet)"],
+        "Room 2": ["Charlie (party)"],
+        "Room 3": [],
+        "Room 4": []
+    },
+    "Dorm C": {
+        "Room 1": [],
+        "Room 2": ["Dave (party)"],
+        "Room 3": []
+    },
+    "Dorm D": {
+        "Room 1": [],
+        "Room 2": [],
+        "Room 3": []
+    }
+}
