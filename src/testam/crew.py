@@ -1,12 +1,15 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 
 @CrewBase
-class Testam():
+class TestamCrew():
 	"""Testam crew"""
 
 	# Learn more about YAML configuration files here:
