@@ -6,7 +6,7 @@ import os
 
 from datetime import datetime
 
-from crew import TestamCrew
+from testam.crew import TestamCrew
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
