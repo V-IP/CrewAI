@@ -1,19 +1,24 @@
 #!/usr/bin/env python
-import sys
-import warnings
+# import sys
 import json
 import os
+from testam.crew import (
+    TestamCrew,
+)
 
-from datetime import datetime
+# import warnings
 
-from testam.crew import TestamCrew
+# from datetime import datetime
 
-warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
+# from testam.crew import TestamCrew
 
-# This main file is intended to be a way for you to run your
-# crew locally, so refrain from adding unnecessary logic into this file.
-# Replace with inputs you want to test with, it will automatically
-# interpolate any tasks and agents information
+# warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
+
+# # This main file is intended to be a way for you to run your
+# # crew locally, so refrain from adding unnecessary logic into this file.
+# # Replace with inputs you want to test with, it will automatically
+# # interpolate any tasks and agents information
+
 ROOMS_FILE = "rooms.json"
 DORMS_FILE = "dorms.json"
 
@@ -46,10 +51,4 @@ def run():
         "student_profile": student_profile 
     }
     
-    try:
-        TestamCrew().crew().kickoff(inputs=inputs)
-    except Exception as e:
-        raise Exception(f"An error occurred while running the crew: {e}")
-
-if __name__== "__main__":
-    run()
+    TestamCrew().crew().kickoff(inputs=inputs)
